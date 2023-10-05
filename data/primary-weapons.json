@@ -18,10 +18,17 @@
           "team": "t"
         },
         {
-          "name": "M4A1-S / M4A4",
+          "name": "M4A4",
           "bind": "m4a1",
           "slot": 2,
           "price": 3100,
+          "team": "ct"
+        },
+        {
+          "name": "M4A1-S",
+          "bind": "m4a1_silencer",
+          "slot": 2,
+          "price": 2900,
           "team": "ct"
         },
         {
