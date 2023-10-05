@@ -2,7 +2,7 @@
 <html lang="en" ng-app="buyndsApp">
 <head>
     <meta charset="utf-8">
-    <title>CS2-Buybinds | The Best CS2 Buy Binds Generator</title>
+    <title>CS2-BuyBinds | The Best CS2 Buy Binds Generator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Jesse Webb">
     <meta name="description" content="Web tool for generating CS2 buy binds/scripts.">
@@ -27,17 +27,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a id="navSiteLink" class="navbar-brand" href="http://csgobuynds.com">CSGO-Buynds</a>
+            <a id="navSiteLink" class="navbar-brand" href="justinknguyen.github.io/cs2-buybinds/">CS2-BuyBinds</a>
         </div>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a id="navHomeLink" href="index.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                <li class="active"><a id="navGeneratorLink" ng-href="{{$root.href}}" ng-click="reloadPage()"><span class="glyphicon glyphicon-cog"></span> Generator</a></li>
-                <li><a id="navHelpLink" href="help.html"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
-                <li><a id="navAboutLink" href="about.html"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
-            </ul>
             <div class="navbar-right">
-                <a id="navCsgoBuyndsGitHubLinkButton" class="btn btn-success navbar-btn" href="https://github.com/jessewebb/csgo-buynds" target="_blank">
+                <a id="navCsgoBuyndsGitHubLinkButton" class="btn btn-success navbar-btn" href="https://github.com/justinknguyen/cs2-buybinds" target="_blank">
                     View on GitHub <img id="githubIconImg" src="images/GitHub-Mark-Light-64px.png" alt="GitHub Octocat mark" />
                 </a>
             </div>
@@ -51,14 +45,18 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-md-8">
+            <h2 id="general-info">This is a fork of <a href="https://csgobuynds.com/">https://csgobuynds.com/</a></h2>
+        </div>
+    
+        <div class="col-sm-12" style="margin-top: 20px;">
             <ul class="nav nav-pills">
                 <li active-tab-class="active"><a id="generatorMultiKeyGenLink" href="#!/">Multi-Key Generator</a></li>
                 <li active-tab-class="active"><a id="generatorSingleKeyGenLink" href="#!/skg">Single Key Generator</a></li>
             </ul>
-
+    
             <div ng-view></div>
-
+    
             <!-- <p>Version: <span app-version></span></p> -->
             <div><code class="pull-right">{{ 'Version: %VERSION%' | interpolate }}</code></div>
         </div>
@@ -68,7 +66,7 @@
         <span>Copyright &copy; 2014-2018 <a id="footerCopyrightGweebzTwitterLink" href="https://twitter.com/gweebz" target="_blank">Jesse Webb</a></span><br />
         <span><small>All Counter-Strike images procured using the <a id="footerCsgoIconExtractorLink" href="https://github.com/jessewebb/csgo-icon-extractor" target="_blank">csgo-icon-extractor</a>.</small></span><br />
         <span><small>Counter-Strike™ is a trademark of <a id="footerDisclaimerValveLink" href="https://www.valvesoftware.com" target="_blank">the Valve Corporation</a>.</small></span><br />
-        <span><small>CSGO-Buynds is not associated with Valve in any way.</small></span>
+        <span><small>CS2-BuyBinds is not associated with Valve in any way.</small></span>
     </div>
 </div>
 
