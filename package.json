@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jessewebb/csgo-buynds.git"
+    "url": "https://github.com/justinknguyen/cs2-buybinds.git"
   },
   "license": "MIT",
   "devDependencies": {

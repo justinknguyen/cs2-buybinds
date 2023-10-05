@@ -5,28 +5,28 @@
       "keys": [
         {
           "name": "1 / End",
-          "bind": "kp_end",
+          "bind": "kp_1",
           "code": 97,
           "html": "1<br/><span class=\"key-alt-fn\">End</span>",
           "order": 12
         },
         {
           "name": "2 / Down Arrow",
-          "bind": "kp_downarrow",
+          "bind": "kp_2",
           "code": 98,
           "html": "2<br/><span class=\"key-alt-fn arrow\">↓</span>",
           "order": 13
         },
         {
           "name": "3 / Page Down",
-          "bind": "kp_pgdn",
+          "bind": "kp_3",
           "code": 99,
           "html": "3<br/><span class=\"key-alt-fn\">Pg Dn</span>",
           "order": 14
         },
         {
           "name": "4 / Left Arrow",
-          "bind": "kp_leftarrow",
+          "bind": "kp_4",
           "code": 100,
           "html": "4<br/><span class=\"key-alt-fn arrow\">←</span>",
           "order": 9
@@ -40,35 +40,35 @@
         },
         {
           "name": "6 / Right Arrow",
-          "bind": "kp_rightarrow",
+          "bind": "kp_6",
           "code": 102,
           "html": "6<br/><span class=\"key-alt-fn arrow\">→</span>",
           "order": 11
         },
         {
           "name": "7 / Home",
-          "bind": "kp_home",
+          "bind": "kp_7",
           "code": 103,
           "html": "7<br/><span class=\"key-alt-fn\">Home</span>",
           "order": 5
         },
         {
           "name": "8 / Up Arrow",
-          "bind": "kp_uparrow",
+          "bind": "kp_8",
           "code": 104,
           "html": "8<br/><span class=\"key-alt-fn arrow\">↑</span>",
           "order": 6
         },
         {
           "name": "9 / Page Up",
-          "bind": "kp_pgup",
+          "bind": "kp_9",
           "code": 105,
           "html": "9<br/><span class=\"key-alt-fn\">Pg Up</span>",
           "order": 7
         },
         {
           "name": "0 / Insert",
-          "bind": "kp_ins",
+          "bind": "kp_0",
           "code": 96,
           "html": "0<br/><span class=\"key-alt-fn\">Insert</span>",
           "css": "wide-key",
@@ -83,7 +83,7 @@
         },
         {
           "name": "/ (Slash)",
-          "bind": "kp_slash",
+          "bind": "kp_divide",
           "code": 111,
           "html": "/",
           "order": 2
