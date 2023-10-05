@@ -1,15 +1,6 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="mkg generator panel panel-primary">
-            <div class="panel-heading">
-                <div class="pull-right hidden-xs">
-                    <button type="button" class="btn btn-info" ng-click="openLoadBindsModal()">Load Binds <span class="glyphicon glyphicon-download-alt"></span></button>
-                </div>
-                <h4>Multi-Key Generator</h4>
-                <div class="visible-xs">
-                    <button type="button" class="btn btn-info" ng-click="openLoadBindsModal()">Load Binds <span class="glyphicon glyphicon-download-alt"></span></button>
-                </div>
-            </div>
             <div class="panel-body">
                 <form id="mkgForm" name="mkgForm" class="form-horizontal">
                     <fieldset>
@@ -126,12 +117,9 @@
                     <hr />
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-8 col-sm-offset-3 col-sm-9">
-                            <!-- Remove the buttons -->
-                        </div>
-                        <div class="col-lg-offset-4 col-lg-8 col-sm-offset-3 col-sm-9">
-                            <div class="checkbox" style="display: none;"> <!-- Hide the checkbox using "display: none;" -->
+                            <div class="checkbox">
                                 <label>
-                                    <input type="checkbox" ng-checked="true" ng-click="toggleAutoGenerateBinds()" style="display: none;"> <!-- Always checked and hidden -->
+                                    <input type="checkbox" ng-checked="true" ng-click="toggleAutoGenerateBinds()" style="display: none;">
                                     Auto-Generate Binds
                                 </label>
                             </div>
