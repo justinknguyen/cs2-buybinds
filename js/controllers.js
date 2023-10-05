@@ -191,6 +191,25 @@ buyndsControllers.controller('MultiKeyGenCtrl', ['$scope', '$uibModal', '$route'
 
     $scope.generatedBuyBindsComment = '// buy binds';
 
+    $scope.exportToAutoexec = function() {
+        var autoexecContent = $scope.generatedBuyBindsComment + '\n';
+
+        $scope.buyBinds.forEach(function(buyBind) {
+            autoexecContent += buyBind + '\n';
+        });
+
+        var blob = new Blob([autoexecContent], { type: 'text/plain' });
+
+        var a = document.createElement('a');
+        a.href = window.URL.createObjectURL(blob);
+        a.download = 'autoexec.cfg';
+
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    };
+    
     $scope.hasAnyBindOptions = function () {
         return !jQuery.isEmptyObject($scope.bindOptionsMap);
     };
