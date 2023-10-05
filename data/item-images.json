@@ -34,7 +34,7 @@
         "url": "images/csgo-icons/199.jpg"
       }
     },
-    "m4a1": {
+    "m4a1_silencer": {
       "silhouetteGrey": {
         "width": 117,
         "height": 32,
@@ -51,7 +51,7 @@
         "url": "images/csgo-icons/473.jpg"
       }
     },
-    "m4a4": {
+    "m4a1": {
       "silhouetteGrey": {
         "width": 94,
         "height": 32,
