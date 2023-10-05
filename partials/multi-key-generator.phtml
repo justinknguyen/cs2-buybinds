@@ -126,13 +126,12 @@
                     <hr />
                     <div class="form-group">
                         <div class="col-lg-offset-4 col-lg-8 col-sm-offset-3 col-sm-9">
-                            <input id="mkgSubmitBtn" name="mkgSubmitBtn" type="submit" class="btn btn-primary" ng-click="generateBinds()" value="Generate Binds" ng-disabled="!hasAnyBindOptions() || autoGenerateBinds" />
-                            <input id="mkgResetBtn" name="mkgResetBtn" type="reset" class="btn btn-default" ng-click="resetBinds()" value="Reset" />
+                            <!-- Remove the buttons -->
                         </div>
                         <div class="col-lg-offset-4 col-lg-8 col-sm-offset-3 col-sm-9">
-                            <div class="checkbox">
+                            <div class="checkbox" style="display: none;"> <!-- Hide the checkbox using "display: none;" -->
                                 <label>
-                                    <input type="checkbox" ng-checked="autoGenerateBinds" ng-click="toggleAutoGenerateBinds()">
+                                    <input type="checkbox" ng-checked="true" ng-click="toggleAutoGenerateBinds()" style="display: none;"> <!-- Always checked and hidden -->
                                     Auto-Generate Binds
                                 </label>
                             </div>

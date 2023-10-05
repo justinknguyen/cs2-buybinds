@@ -1,4 +1,4 @@
-Sitemap: http://csgobuynds.com/sitemap.xml
+Sitemap: https://justinknguyen.github.io/cs2-buybinds/sitemap.xml
 
 User-agent: *
 Disallow: /tests/

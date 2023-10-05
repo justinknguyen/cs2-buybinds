@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://csgobuynds.com/</loc>
-    </url>
-    <url>
-        <loc>http://csgobuynds.com/buy-binds-generator.html</loc>
-    </url>
-    <url>
-        <loc>http://csgobuynds.com/help.html</loc>
-    </url>
-    <url>
-        <loc>http://csgobuynds.com/about.html</loc>
+        <loc>https://justinknguyen.github.io/cs2-buybinds/</loc>
     </url>
 </urlset>
