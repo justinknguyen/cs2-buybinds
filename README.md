@@ -1,4 +1,4 @@
-# csgo-buynds
+# cs2-buybinds
 
 Copyright © 2014-2018 Jesse Webb
 
@@ -6,47 +6,13 @@ This code is available under [the MIT License](https://github.com/jessewebb/csgo
 
 `Version: 1.0.0`
 
-[![Build Status](https://travis-ci.org/jessewebb/csgo-buynds.svg?branch=gh-pages)](https://travis-ci.org/jessewebb/csgo-buynds)
+## About cs2-buybinds
 
-## About csgo-buynds
-
-### _What?_
-
-**csgo-buynds** is an open-source web-app for generating buy binds for _[Counter-Strike: Global Offensive](https://en.wikipedia.org/wiki/Counter-Strike:_Global_Offensive)_ (CS:GO).
+**cs2-buybinds** is a fork of [csgo-buynds](https://github.com/jessewebb/csgo-buynds).
 
 Buy binds, also known as buy scripts, are commands for the _Counter-Strike_ PC games that allow quick, 1-button purchasing of weapons and equipment.
 
-Visit the [CSGO-Buynds website](http://csgobuynds.com) and try out the online Buy Binds Generator!
-
-### _Why?_
-
-This project was started for several reasons:
-
-- All other buy bind generators only allow configuring a single key bind at once
-- To become more familiar with JavaScript
-- To experiment with AngularJS
-- To learn JavaScript testing patterns
-
-Along with allowing you to configure multiple key binds at once, there are other unique features planned for csgo-buynds:
-
-- Saved player profiles for automatic loading of bind configs
-- Sortable weapons and equipment for customizable purchasing priority
-- Printable key-map for quick reference
-
-### _Who?_
-
-The [CSGO-Buynds Buy Binds Generator](http://csgobuynds.com/buy-binds-generator.html) was made for all of the CS:GO PC players out there who don't want to use the clunky radial menu for purchasing their weapons and equipment.
-The online tool is simple enough for anybody to use yet powerful enough to build highly customized binds.
-Everyone from noobs to Pros will enjoy being able to create easily-accessible loadouts.
-Don't get caught fumbling in the CS:GO buy menu. Never be the last player out of spawn again!
-
-The creator of **csgo-buynds** is Jesse Webb (a.k.a. Gweebz), a long time player of the _Counter-Strike_ series.
-
-- [Jesse Webb on Twitter](https://twitter.com/gweebz)
-- [Jesse Webb on GitHub](https://github.com/jessewebb)
-- [Jesse Webb on Stack Overflow](https://stackoverflow.com/users/346561/jesse-webb)
-- [Gweebz on Steam](https://steamcommunity.com/id/gweebz)
-- [GweebzTV on Twitch.TV](https://www.twitch.tv/GweebzTV)
+Visit the [CS2-BuyBinds website](https://justinknguyen.github.io/cs2-buybinds/) and try out the online Buy Binds Generator!
 
 ## Dev Info
 
@@ -79,3 +45,17 @@ Tests are written with [Jasmine](https://jasmine.github.io) (version: 2.5.2).
   (The project is configured to use [Karma](https://karma-runner.github.io) (version: 1.3.0) to run the tests.)
 
 Jesse's preferred JavaScript IDE is [JetBrain's WebStorm](https://www.jetbrains.com/webstorm).
+
+To start a local development server:
+1. Install http-server:
+    ```
+    npm install -g http-server
+    ```
+2. Start the server:
+    ```
+    http-server
+    ```
+3. Access the local website:
+    ```
+    http://localhost:8080
+    ```
