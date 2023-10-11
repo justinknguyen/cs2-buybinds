@@ -182,68 +182,23 @@
             if (bindString.startsWith('"') && bindString.endsWith('"')) {
                 bindString = bindString.substring(1, bindString.length - 1);
                 var buyCommands = bindString.split(';');
-                var buyVestCommand = null;
-                var buyVestHelmCommand = null;
-                var buyFireCommand = null;
-                var buyDecoyCommand = null;
-                var buyFlashCommand = null;
-                var buyNadeCommand = null;
-                var buySmokeCommand = null;
-
                 for (var i = 0; i < buyCommands.length; i++) {
                     var buyCommand = buyCommands[i].trim();
                     if (buyCommand.startsWith('buy ')) {
                         var equipmentToBuy = buyCommand.substring(4);
-
-                        if (equipmentToBuy === 'vest' && buyVestCommand === null) {
-                            buyVestCommand = equipmentToBuy;
-                        } else if (equipmentToBuy === 'vesthelm' && buyVestHelmCommand === null) {
-                            buyVestHelmCommand = equipmentToBuy;
-                        } else if ((equipmentToBuy === 'incgrenade' || equipmentToBuy === 'molotov') && buyFireCommand === null) {
-                            buyFireCommand = equipmentToBuy;
-                        } else if (equipmentToBuy === 'decoy' && buyDecoyCommand === null) {
-                            buyDecoyCommand = equipmentToBuy;
-                        } else if (equipmentToBuy === 'flashbang' && buyFlashCommand === null) {
-                            buyFlashCommand = equipmentToBuy;
-                        } else if (equipmentToBuy === 'hegrenade' && buyNadeCommand === null) {
-                            buyNadeCommand = equipmentToBuy;
-                        } else if (equipmentToBuy === 'smokegrenade' && buySmokeCommand === null) {
-                            buySmokeCommand = equipmentToBuy;
-                        } else {
-                            if (isBindForPrimaryWeapon(equipmentToBuy)) {
-                                bindOptions.primaryWeapons.push(equipmentToBuy);
-                            }
-                            if (isBindForSecondaryWeapon(equipmentToBuy)) {
-                                bindOptions.secondaryWeapons.push(equipmentToBuy);
-                            }
-                            if (isBindForGearItem(equipmentToBuy)) {
-                                bindOptions.gear.push(equipmentToBuy)
-                            }
+                        if (isBindForPrimaryWeapon(equipmentToBuy)) {
+                            bindOptions.primaryWeapons.push(equipmentToBuy);
+                        }
+                        if (isBindForSecondaryWeapon(equipmentToBuy)) {
+                            bindOptions.secondaryWeapons.push(equipmentToBuy);
+                        }
+                        if (isBindForGearItem(equipmentToBuy)) {
+                            bindOptions.gear.push(equipmentToBuy)
+                        }
+                        if (isBindForGrenade(equipmentToBuy)) {
+                            bindOptions.grenades.push(equipmentToBuy);
                         }
                     }
-                }
-                // Add 'vest' before 'vesthelm' commands if they exist
-                if (buyVestCommand && isBindForGearItem(buyVestCommand)) {
-                    bindOptions.gear.push(buyVestCommand);
-                }
-                if (buyVestHelmCommand && isBindForGearItem(buyVestHelmCommand)) {
-                    bindOptions.gear.push(buyVestHelmCommand);
-                }
-                // Add smoke, then flash, then nade, then molly, then decoy
-                if (buySmokeCommand && isBindForGrenade(buySmokeCommand)) {
-                    bindOptions.grenades.push(buySmokeCommand);
-                }
-                if (buyFlashCommand && isBindForGrenade(buyFlashCommand)) {
-                    bindOptions.grenades.push(buyFlashCommand);
-                }
-                if (buyNadeCommand && isBindForGrenade(buyNadeCommand)) {
-                    bindOptions.grenades.push(buyNadeCommand);
-                }
-                if (buyFireCommand && isBindForGrenade(buyFireCommand)) {
-                    bindOptions.grenades.push(buyFireCommand);
-                }
-                if (buyDecoyCommand && isBindForGrenade(buyDecoyCommand)) {
-                    bindOptions.grenades.push(buyDecoyCommand);
                 }
             }
 
