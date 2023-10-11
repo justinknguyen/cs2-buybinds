@@ -2,17 +2,17 @@
 
 // csgo-buynds buy binds builder
 
-(function(buynds) {
+(function (buynds) {
 
     if (!String.prototype.startsWith) {
-        String.prototype.startsWith = function(searchString, position){
+        String.prototype.startsWith = function (searchString, position) {
             position = position || 0;
             return this.substr(position, searchString.length) === searchString;
         };
     }
 
     if (!String.prototype.endsWith) {
-        String.prototype.endsWith = function(searchString, position) {
+        String.prototype.endsWith = function (searchString, position) {
             var subjectString = this.toString();
             if (typeof position !== 'number' || !isFinite(position) || Math.floor(position) !== position || position > subjectString.length) {
                 position = subjectString.length;
@@ -23,7 +23,7 @@
         };
     }
 
-    buynds.BindOptions = function() {
+    buynds.BindOptions = function () {
         var self = this;
 
         self.keyToBind = '';
@@ -32,7 +32,7 @@
         self.gear = [];
         self.grenades = [];
 
-        self.clone = function() {
+        self.clone = function () {
             var clone = new buynds.BindOptions();
             clone.keyToBind = self.keyToBind;
             clone.primaryWeapons = self.primaryWeapons.slice();
@@ -43,7 +43,7 @@
         };
     };
 
-    buynds.BindBuilder = function() {
+    buynds.BindBuilder = function () {
         var self = this;
 
         self.build = function (bindOptions) {
@@ -80,7 +80,7 @@
         };
     };
 
-    buynds.BindLoader = function(primaryWeapons, secondaryWeapons, gear, grenades) {
+    buynds.BindLoader = function (primaryWeapons, secondaryWeapons, gear, grenades) {
         var self = this;
 
         self.primaryWeapons = primaryWeapons;
@@ -160,7 +160,7 @@
                     var buyCommand = buyCommands[i].trim();
                     if (buyCommand.startsWith('buy ')) {
                         var equipmentToBuy = buyCommand.substring(4);
-                    
+
                         if (equipmentToBuy === 'vest' && buyVestCommand === null) {
                             buyVestCommand = equipmentToBuy;
                         } else if (equipmentToBuy === 'vesthelm' && buyVestHelmCommand === null) {
@@ -182,10 +182,10 @@
                     }
                 }
                 // Add 'vest' before 'vesthelm' commands if they exist
-                if (buyVestCommand) {
+                if (isBindForGearItem(buyVestCommand)) {
                     bindOptions.gear.push(buyVestCommand);
                 }
-                if (buyVestHelmCommand) {
+                if (isBindForGearItem(buyVestHelmCommand)) {
                     bindOptions.gear.push(buyVestHelmCommand);
                 }
             }
@@ -194,7 +194,7 @@
         };
     };
 
-    buynds.BindRecord = function(id, name, bindString) {
+    buynds.BindRecord = function (id, name, bindString) {
         var self = this;
 
         self.id = id;
@@ -202,14 +202,14 @@
         self.bindString = bindString;
     };
 
-    buynds.BindRepository = function(bindStorage) {
+    buynds.BindRepository = function (bindStorage) {
         var self = this;
 
         self.bindStorage = bindStorage;
 
         var RECORD_KEY_PREFIX = 'bind_id:';
 
-        var buildKey = function(id) {
+        var buildKey = function (id) {
             return RECORD_KEY_PREFIX + id
         };
 
@@ -248,7 +248,7 @@
         };
     };
 
-    buynds.BuyableItem = function(name, bind, slot, price, team) {
+    buynds.BuyableItem = function (name, bind, slot, price, team) {
         var self = this;
 
         self.name = name;
@@ -258,14 +258,14 @@
         self.team = team;
     };
 
-    buynds.BindOptionsTotalPrice = function(ct, t) {
+    buynds.BindOptionsTotalPrice = function (ct, t) {
         var self = this;
 
         self.ct = ct;
         self.t = t;
     };
 
-    buynds.TotalPriceCalculator = function(primaryWeapons, secondaryWeapons, gear, grenades) {
+    buynds.TotalPriceCalculator = function (primaryWeapons, secondaryWeapons, gear, grenades) {
         var self = this;
 
         self.primaryWeapons = primaryWeapons;
@@ -373,7 +373,7 @@
         };
     };
 
-    buynds.ItemImage = function(url, width, height, itemBind) {
+    buynds.ItemImage = function (url, width, height, itemBind) {
         var self = this;
 
         self.url = url;
@@ -382,7 +382,7 @@
         self.itemBind = itemBind;
     };
 
-    buynds.ItemImageService = function(itemImages, primaryWeapons, secondaryWeapons, gear, grenades) {
+    buynds.ItemImageService = function (itemImages, primaryWeapons, secondaryWeapons, gear, grenades) {
         var self = this;
 
         self.itemImages = itemImages;
