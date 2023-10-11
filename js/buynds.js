@@ -85,7 +85,10 @@
                 }
                 if (bindOptions.grenades.includes('flashbang')) {
                     var flashbangCount = bindOptions.grenades.filter(grenade => grenade === 'flashbang').length;
-                    bindString += 'buy flashbang'.repeat(flashbangCount) + '; ';             
+                    bindString += 'buy flashbang; ';
+                    if (flashbangCount > 1){
+                        bindString += 'buy flashbang; ';
+                    }             
                 }
                 if (bindOptions.grenades.includes('hegrenade')) {
                     bindString += 'buy hegrenade; ';
