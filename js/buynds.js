@@ -109,7 +109,7 @@
         };
     };
 
-    buynds.BindLoader = function (primaryWeapons, secondaryWeapons, gear, grenades) {
+    buynds.BindLoader = function(primaryWeapons, secondaryWeapons, gear, grenades) {
         var self = this;
 
         self.primaryWeapons = primaryWeapons;
