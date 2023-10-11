@@ -153,23 +153,40 @@
             if (bindString.startsWith('"') && bindString.endsWith('"')) {
                 bindString = bindString.substring(1, bindString.length - 1);
                 var buyCommands = bindString.split(';');
+                var buyVestCommand = null;
+                var buyVestHelmCommand = null;
+
                 for (var i = 0; i < buyCommands.length; i++) {
                     var buyCommand = buyCommands[i].trim();
                     if (buyCommand.startsWith('buy ')) {
                         var equipmentToBuy = buyCommand.substring(4);
-                        if (isBindForPrimaryWeapon(equipmentToBuy)) {
-                            bindOptions.primaryWeapons.push(equipmentToBuy);
-                        }
-                        if (isBindForSecondaryWeapon(equipmentToBuy)) {
-                            bindOptions.secondaryWeapons.push(equipmentToBuy);
-                        }
-                        if (isBindForGearItem(equipmentToBuy)) {
-                            bindOptions.gear.push(equipmentToBuy)
-                        }
-                        if (isBindForGrenade(equipmentToBuy)) {
-                            bindOptions.grenades.push(equipmentToBuy);
+                    
+                        if (equipmentToBuy === 'vest' && buyVestCommand === null) {
+                            buyVestCommand = equipmentToBuy;
+                        } else if (equipmentToBuy === 'vesthelm' && buyVestHelmCommand === null) {
+                            buyVestHelmCommand = equipmentToBuy;
+                        } else {
+                            if (isBindForPrimaryWeapon(equipmentToBuy)) {
+                                bindOptions.primaryWeapons.push(equipmentToBuy);
+                            }
+                            if (isBindForSecondaryWeapon(equipmentToBuy)) {
+                                bindOptions.secondaryWeapons.push(equipmentToBuy);
+                            }
+                            if (isBindForGearItem(equipmentToBuy)) {
+                                bindOptions.gear.push(equipmentToBuy)
+                            }
+                            if (isBindForGrenade(equipmentToBuy)) {
+                                bindOptions.grenades.push(equipmentToBuy);
+                            }
                         }
                     }
+                }
+                // Add 'vest' before 'vesthelm' commands if they exist
+                if (buyVestCommand) {
+                    bindOptions.gear.push(buyVestCommand);
+                }
+                if (buyVestHelmCommand) {
+                    bindOptions.gear.push(buyVestHelmCommand);
                 }
             }
 
