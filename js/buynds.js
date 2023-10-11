@@ -85,6 +85,10 @@
                 }
                 if (bindOptions.grenades.includes('flashbang')) {
                     bindString += 'buy flashbang; ';
+                    bindOptions.grenades.splice(bindOptions.grenades.indexOf('flashbang'), 1); // Remove 'flashbang'
+                }
+                if (bindOptions.grenades.includes('flashbang')) {
+                    bindString += 'buy flashbang; ';
                 }
                 if (bindOptions.grenades.includes('hegrenade')) {
                     bindString += 'buy hegrenade; ';
