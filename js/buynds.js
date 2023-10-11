@@ -84,11 +84,10 @@
                     bindString += 'buy smokegrenade; ';
                 }
                 if (bindOptions.grenades.includes('flashbang')) {
-                    bindString += 'buy flashbang; ';
-                    bindOptions.grenades.splice(bindOptions.grenades.indexOf('flashbang'), 1); // Remove 'flashbang'
-                }
-                if (bindOptions.grenades.includes('flashbang')) {
-                    bindString += 'buy flashbang; ';
+                    var flashbangCount = bindOptions.grenades.filter(grenade => grenade === 'flashbang').length;
+                    if (flashbangCount > 0) {
+                        bindString += 'buy flashbang'.repeat(flashbangCount) + '; ';
+                    }                
                 }
                 if (bindOptions.grenades.includes('hegrenade')) {
                     bindString += 'buy hegrenade; ';
