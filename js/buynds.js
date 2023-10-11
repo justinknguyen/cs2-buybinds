@@ -190,9 +190,6 @@
                             if (isBindForGearItem(equipmentToBuy)) {
                                 bindOptions.gear.push(equipmentToBuy)
                             }
-                            if (isBindForGrenade(equipmentToBuy)) {
-                                bindOptions.grenades.push(equipmentToBuy);
-                            }
                         }
                     }
                 }
