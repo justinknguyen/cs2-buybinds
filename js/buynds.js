@@ -194,26 +194,26 @@
                     }
                 }
                 // Add 'vest' before 'vesthelm' commands if they exist
-                if (isBindForGearItem(buyVestCommand)) {
+                if (buyVestCommand && isBindForGearItem(buyVestCommand)) {
                     bindOptions.gear.push(buyVestCommand);
                 }
-                if (isBindForGearItem(buyVestHelmCommand)) {
+                if (buyVestHelmCommand && isBindForGearItem(buyVestHelmCommand)) {
                     bindOptions.gear.push(buyVestHelmCommand);
                 }
                 // Add smoke, then flash, then nade, then molly, then decoy
-                if (isBindForGrenade(buySmokeCommand)) {
+                if (buySmokeCommand && isBindForGrenade(buySmokeCommand)) {
                     bindOptions.grenades.push(buySmokeCommand);
                 }
-                if (isBindForGrenade(buyFlashCommand)) {
+                if (buyFlashCommand && isBindForGrenade(buyFlashCommand)) {
                     bindOptions.grenades.push(buyFlashCommand);
                 }
-                if (isBindForGrenade(buyNadeCommand)) {
+                if (buyNadeCommand && isBindForGrenade(buyNadeCommand)) {
                     bindOptions.grenades.push(buyNadeCommand);
                 }
-                if (isBindForGrenade(buyFireCommand)) {
+                if (buyFireCommand && isBindForGrenade(buyFireCommand)) {
                     bindOptions.grenades.push(buyFireCommand);
                 }
-                if (isBindForGrenade(buyDecoyCommand)) {
+                if (buyDecoyCommand && isBindForGrenade(buyDecoyCommand)) {
                     bindOptions.grenades.push(buyDecoyCommand);
                 }
             }
