@@ -155,6 +155,11 @@
                 var buyCommands = bindString.split(';');
                 var buyVestCommand = null;
                 var buyVestHelmCommand = null;
+                var buyFireCommand = null;
+                var buyDecoyCommand = null;
+                var buyFlashCommand = null;
+                var buyNadeCommand = null;
+                var buySmokeCommand = null;
 
                 for (var i = 0; i < buyCommands.length; i++) {
                     var buyCommand = buyCommands[i].trim();
@@ -165,6 +170,16 @@
                             buyVestCommand = equipmentToBuy;
                         } else if (equipmentToBuy === 'vesthelm' && buyVestHelmCommand === null) {
                             buyVestHelmCommand = equipmentToBuy;
+                        } else if ((equipmentToBuy === 'incgrenade' || equipmentToBuy === 'molotov') && buyFireCommand === null) {
+                            buyFireCommand = equipmentToBuy;
+                        } else if (equipmentToBuy === 'decoy' && buyDecoyCommand === null) {
+                            buyDecoyCommand = equipmentToBuy;
+                        } else if (equipmentToBuy === 'flashbang' && buyFlashCommand === null) {
+                            buyFlashCommand = equipmentToBuy;
+                        } else if (equipmentToBuy === 'hegrenade' && buyNadeCommand === null) {
+                            buyNadeCommand = equipmentToBuy;
+                        } else if (equipmentToBuy === 'smokegrenade' && buySmokeCommand === null) {
+                            buySmokeCommand = equipmentToBuy;
                         } else {
                             if (isBindForPrimaryWeapon(equipmentToBuy)) {
                                 bindOptions.primaryWeapons.push(equipmentToBuy);
@@ -187,6 +202,22 @@
                 }
                 if (isBindForGearItem(buyVestHelmCommand)) {
                     bindOptions.gear.push(buyVestHelmCommand);
+                }
+                // Add smoke, then flash, then nade, then molly, then decoy
+                if (isBindForGrenade(buySmokeCommand)) {
+                    bindOptions.grenades.push(buySmokeCommand);
+                }
+                if (isBindForGrenade(buyFlashCommand)) {
+                    bindOptions.grenades.push(buyFlashCommand);
+                }
+                if (isBindForGrenade(buyNadeCommand)) {
+                    bindOptions.grenades.push(buyNadeCommand);
+                }
+                if (isBindForGrenade(buyFireCommand)) {
+                    bindOptions.grenades.push(buyFireCommand);
+                }
+                if (isBindForGrenade(buyDecoyCommand)) {
+                    bindOptions.grenades.push(buyDecoyCommand);
                 }
             }
 
