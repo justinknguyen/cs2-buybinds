@@ -64,15 +64,40 @@
             }
 
             if (bindOptions.gear) {
-                bindOptions.gear.forEach(function (gearItem) {
-                    bindString += 'buy ' + gearItem + '; ';
-                });
+                // Add the "buy vest" command first if it exists in the gear array
+                if (bindOptions.gear.includes('vest')) {
+                    bindString += 'buy vest; ';
+                }
+                if (bindOptions.gear.includes('vesthelm')) {
+                    bindString += 'buy vesthelm; ';
+                }
+                if (bindOptions.gear.includes('defuser')) {
+                    bindString += 'buy defuser; ';
+                }
+                if (bindOptions.gear.includes('taser 34')) {
+                    bindString += 'buy taser 34; ';
+                }
             }
 
             if (bindOptions.grenades) {
-                bindOptions.grenades.forEach(function (grenade) {
-                    bindString += 'buy ' + grenade + '; ';
-                });
+                if (bindOptions.grenades.includes('smokegrenade')) {
+                    bindString += 'buy smokegrenade; ';
+                }
+                if (bindOptions.grenades.includes('flashbang')) {
+                    bindString += 'buy flashbang; ';
+                }
+                if (bindOptions.grenades.includes('hegrenade')) {
+                    bindString += 'buy hegrenade; ';
+                }
+                if (bindOptions.grenades.includes('incgrenade')) {
+                    bindString += 'buy incgrenade; ';
+                }
+                if (bindOptions.grenades.includes('molotov')) {
+                    bindString += 'buy molotov; ';
+                }
+                if (bindOptions.grenades.includes('decoy')) {
+                    bindString += 'buy decoy; ';
+                }
             }
 
             bindString = bindString.trim() + '"';
